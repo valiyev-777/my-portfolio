@@ -130,6 +130,20 @@ export const ProjectsSection = () => {
             </div>
           ))}
         </div>
+        <div className="flex justify-center  items-center flex-col mt-10">
+          <p className="text-center text-white/60 mt-4 max-w-md mx-auto lg:text-xl">
+            Want to see more? Check out my other projects.
+          </p>
+          <a href="/projects" className="">
+            <button
+              className="bg-white text-gray-950 h-12 px-6 w-full rounded-xl font-semibold inline-flex
+                                 items-center justify-center gap-2 mt-8 md:w-auto"
+            >
+              <span>View All Projects</span>
+              <ArrowUpRightIcon className="size-4" />
+            </button>
+          </a>
+        </div>
       </div>
     </section>
   );
