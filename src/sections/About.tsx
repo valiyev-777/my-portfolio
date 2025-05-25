@@ -149,7 +149,7 @@ export const AboutSection = () => {
               />
 
               <div
-                className=" relative flex-1"
+                className=" relative  flex-1"
                 ref={constraintRef}
               >
                 {hobbies.map((hobby) => (
