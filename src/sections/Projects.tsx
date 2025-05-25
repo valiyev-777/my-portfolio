@@ -5,6 +5,8 @@ import CheckIcon from "@/assets/icons/check-circle.svg";
 import GreenImage from "@/assets/images/grain.jpg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import Image from "next/image";
+import { SectionHeader } from "@/components/SectionHeader";
+import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -50,33 +52,18 @@ export const ProjectsSection = () => {
     <section className="pb-16 lg:py-24">
       <div className="container">
         {/* Section Header */}
-        <div className="flex justify-center">
-          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-center">
-            Real-world Results
-          </p>
-        </div>
-        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-          Featured Projects
-        </h2>
-        <p className="text-center md:text-lg text-white/60 mt-4 max-w-md mx-auto lg:text-xl">
-          See how I transformed concepts into engaging digital experiences.
-        </p>
-
+        <SectionHeader
+          eyebrow="Real-world Results"
+          title="Featured Projects"
+          description="See how I transformed concepts into engaging digital experiences."
+        />
         {/* Projects List */}
         <div className="flex flex-col mt-10 gap-20 md:mt-20">
           {portfolioProjects.map((project) => (
-            <div
+            <Card
               key={project.title}
-              className="relative z-0 overflow-hidden rounded-3xl bg-gray-800 px-8 pt-8 md:px-12 md:pt-12 lg:px-20 lg:pt-16
-                         after:content-[''] after:absolute after:inset-0 after:z-10 after:pointer-events-none
-                         after:rounded-3xl after:outline after:outline-white/20 after:-outline-offset-2"
+              className="px-8 pt-8 pb-0 md:px-12 md:pt-12 lg:px-20 lg:pt-16"
             >
-              {/* Background Image */}
-              <div
-                className="absolute inset-0 -z-10 opacity-5"
-                style={{ backgroundImage: `url(${GreenImage.src})` }}
-              ></div>
-
               {/* Project Content */}
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 {/* Left Column */}
@@ -127,7 +114,7 @@ export const ProjectsSection = () => {
                   />
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
         <div className="flex justify-center  items-center flex-col mt-10">
@@ -137,7 +124,7 @@ export const ProjectsSection = () => {
           <a href="/projects" className="">
             <button
               className="bg-white text-gray-950 h-12 px-6 w-full rounded-xl font-semibold inline-flex
-                                 items-center justify-center gap-2 mt-8 md:w-auto"
+              items-center justify-center gap-2 mt-8 md:w-auto"
             >
               <span>View All Projects</span>
               <ArrowUpRightIcon className="size-4" />

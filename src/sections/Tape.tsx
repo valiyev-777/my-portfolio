@@ -16,11 +16,11 @@ const words = [
 
 export const TapeSection = () => {
   return (
-    <div>
+    <div className="">
       <div className="py-16 lg:py-24 overflow-x-clip">
         <div className="bg-gradient-to-r from-emerald-300 to-sky-400  -rotate-3 -mx-1">
           <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_70%,transparent)]">
-            <div className="flex gap-4 flex-none py-3">
+            <div className="flex  gap-4 flex-none py-3 ">
               {words.map((word) => (
                 <div key={word} className="inline-flex gap-4 itmes-center">
                   <span className="text-gray-900 uppercase font-extrabold text-sm">
